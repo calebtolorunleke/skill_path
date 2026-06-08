@@ -3,9 +3,13 @@ import Title from "./Title";
 import { benefitItems } from "../constant/data";
 import { RiArrowRightUpLine } from "@remixicon/react";
 
+// import motion
+import { motion } from "motion/react";
+import * as variants from "../motion/animation";
+
 const Benefits = () => {
   return (
-    <section className="">
+    <section className="section">
       <div className="container">
         {/* title  */}
         <Title

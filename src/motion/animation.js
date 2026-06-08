@@ -30,6 +30,7 @@ export const fadeInUp = {
     filter: "blur(8px",
   },
   show: {
+    y:30,
     opacity: 1,
     filter: "blur(0)",
     transition: {
