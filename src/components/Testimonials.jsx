@@ -30,6 +30,15 @@ const Testimonials = () => {
             1280: { slidesPerview: 2.5 },
           }}
           loop={true}
+          navigation={{
+            prevEl: ".prev-btn",
+            nextEl: ".next-btn",
+          }}
+          autoplay={{
+            delay: 3000,
+            pauseOnMouseEnter: true,
+            disableOnInteraction: false,
+          }}
           className="mt-14 lg:mt-16"
         >
           {testimonialsItems.map((item) => (
@@ -53,18 +62,18 @@ const Testimonials = () => {
                   {/* author  */}
                   <p className="font-medium">{item.author}</p>
                 </div>
-                <button className="Secondary-btn">Read Full Story</button>
+                <button className="secondary-btn">Read Full Story</button>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
         {/* navigation  */}
-        <div className="">
-          <button>
+        <div className="flex items-center justify-center mt-18 gap-5">
+          <button className="bg-orange-70 w-12 h-12 flex items-center justify-center rounded-xl hover:bg-orange-75 transition-colors active:bg-orange-75/80 prev-btn">
             <RiArrowLeftLine size={30} />
           </button>
-          <button className="">
+          <button className="bg-orange-70 w-12 h-12 flex items-center justify-center rounded-xl hover:bg-orange-75 transition-colors active:bg-orange-75/80 next-btn">
             <RiArrowRightLine size={30} />
           </button>
         </div>
