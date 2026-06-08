@@ -58,7 +58,7 @@ const Hero = () => {
             <Marquee speed={40} pauseOnHover gradient={false}>
               {heroLogos.map((logo) => (
                 //logo
-                <div className="" key={logo.id}>
+                <div className="px-14 py-5" key={logo.id}>
                   <img
                     src={logo.img}
                     alt="logo"
@@ -68,24 +68,31 @@ const Hero = () => {
                 </div>
               ))}
             </Marquee>
+
+            {/* left gradient  */}
+            <div className="absolute top-0 left-0  bg-gradient-to-r  from-white-97 via-white-97/80 to-transparent-24 h-full z-10 pointer-events-none" />
+
+            {/* Right gradient */}
+            <div className="absolute top-0 right-0  bg-gradient-to-l  from-white-97 via-white-97/80 to-transparent-24 h-full z-10 pointer-events-none" />
           </div>
         </div>
 
         {/* banner */}
-        <figure>
+        <figure className="relative rounded-xl overflow-hidden mt-10 md:mt-14 lg:mt-[50px] max-w-[920px] w-full h-[500px] mx-auto">
           <img
             src="/images/hero-banner.png"
             alt="hero-banner"
             width={940}
             height={500}
+            className="w-full h-full object-cover"
           />
 
           {/* Dark Overlay  */}
-          <div className="" />
+          <div className="absolute inset-0 bg-black/20 z-10" />
 
           {/* play btn  */}
-          <div className="">
-            <span>
+          <div className="absolute top-1/2 left-1/2 z-20 -transalte-x-1/2 transalte-y-1/2 cursor-pointer">
+            <span className="flex bg-white w-16 h-16 items-center justify-center rounded-full play-btn">
               <RiPlayFill size={30} />
             </span>
           </div>
